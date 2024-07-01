@@ -1,21 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-
-const Homepage = () => {
-  return (
-    <div>
-      <h1>
-        Pokedex
-      </h1>
-    </div>
-  )
-}
+import { Home } from "./Home";
+import "primereact/resources/themes/rhea/theme.css";
+import "primereact/resources/primereact.min.css";
+import "../../index.css";
+import { SinglePokemon } from "./SinglePokemon";
 
 export const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:name" element={<SinglePokemon />} />
       </Routes>
     </div>
   );
-}
+};
