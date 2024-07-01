@@ -17,9 +17,6 @@ export const Home = () => {
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(20);
 
-  const count = useAppSelector((state) => state.pokemonApi);
-  const dispatch = useAppDispatch();
-
   const { data, isSuccess } = useGetAllPokemonQuery(151);
 
   const onPageChange = (event: PaginatorPageChangeEvent) => {
